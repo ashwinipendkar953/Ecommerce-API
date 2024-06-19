@@ -30,7 +30,7 @@ const productSchema = new mongoose.Schema(
     },
     category: {
       type: String,
-      enum: ["Men", "Women", "Kids"],
+      enum: ["Men", "Women", "Kids", "Electronics", "Home"],
       required: true,
     },
     rating: {
@@ -41,7 +41,7 @@ const productSchema = new mongoose.Schema(
       default: 0,
     },
   },
-  { timestamps: true },
+  { timestamps: true }
 );
 
 const Product = mongoose.model("Product", productSchema);
